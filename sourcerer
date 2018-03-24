@@ -2,7 +2,8 @@ FILENAME=".sourcerer"
 
 function readEnv() {
     if [[ -f "$PWD/$FILENAME" ]]; then
-        source $PWD/.myEnv
+        # shellcheck source=/dev/null
+        source "$PWD/$FILENAME"
     fi
 }
 
