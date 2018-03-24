@@ -1,20 +1,8 @@
 FILENAME=".sourcerer"
 
-function readEnv() {
+function sourcerer() {
     if [[ -f "$PWD/$FILENAME" ]]; then
         # shellcheck source=/dev/null
         source "$PWD/$FILENAME"
     fi
 }
-
-function cdd() {
-    if [[ "$builtinCD" -ne 0 ]];
-    then 
-        builtin cd "$@" && readEnv
-    else
-        cd "$@" && readEnv
-    fi
-}
-
-which cd &>/dev/null
-builtinCD=$?
