@@ -3,6 +3,8 @@
 A tool to automatically source a `.sourcerer` file in your shell when entering
 this directory via `cd`.
 
+![example](example.gif "example")
+
 ## installation
 
 `curl https://raw.githubusercontent.com/mstruebing/sourcerer/master/install.sh | bash`
