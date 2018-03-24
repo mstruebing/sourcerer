@@ -2,7 +2,7 @@
 
 SOURCERER_URL="https://raw.githubusercontent.com/mstruebing/sourcerer/master/sourcerer"
 SOURCERER_DIR="$HOME/.sourcerer"
-SOURCERER_FILE="$SOURCERER_DIR/.sourcerer"
+SOURCERER_FILE="$SOURCERER_DIR/sourcerer"
 
 ### BEGIN THANKS NVM
 try_profile() {
