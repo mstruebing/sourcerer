@@ -1,0 +1,19 @@
+FILENAME=".sourcerer"
+
+function readEnv() {
+    if [[ -f "$PWD/$FILENAME" ]]; then
+        source $PWD/.myEnv
+    fi
+}
+
+function cdd() {
+    if [[ "$builtinCD" -ne 0 ]];
+    then 
+        builtin cd "$@" && readEnv
+    else
+        cd "$@" && readEnv
+    fi
+}
+
+which cd &>/dev/null
+builtinCD=$?
