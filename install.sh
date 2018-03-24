@@ -55,7 +55,7 @@ detect_profile() {
 
 install() {
     mkdir -p "$SOURCERER_DIR"
-    curl "$SOURCERER_URL" -o "$SOURCERER_FILE"  &>/dev/null
+    curl -H 'Cache-Control: no-cache' "$SOURCERER_URL" -o "$SOURCERER_FILE"  &>/dev/null
 
     local profile
     profile=$(detect_profile)
