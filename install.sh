@@ -63,6 +63,14 @@ install() {
     echo "" >> "$profile"
     echo "# Source the sourcerer" >> "$profile"
     echo source "$SOURCERER_FILE" >> "$profile"
+
+    if [[ "$profile" == *".zshrc" ]]; then
+        echo 'add-zsh-hook chpwd sourcerer' >> "$profile"
+        echo 'sourcerer' >> "$profile"
+    else
+        echo 'function cd() { builtin cd "$@" && sourcerer }' >> "$profile"
+        echo 'sourcerer' >> "$profile"
+    fi
 }
 
 install
