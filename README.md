@@ -9,8 +9,10 @@ this directory via `cd`.
 
 `curl https://raw.githubusercontent.com/mstruebing/sourcerer/master/install.sh | bash`
 
-This creates a `~/.sourcerer` directory with an `sourcerer` file in there.
-
+This creates a `~/.sourcerer` directory with an `sourcerer` file in there and 
+sources this file in your `.profile`, `.bashrc`, `.bash_profile` or `.zshrc`
+to give you the `sourcerer` command.
+ 
 ## usage
 
 `sourcerer` this will source the contents of a `.sourcerer`-file in the current d
