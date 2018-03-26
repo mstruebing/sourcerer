@@ -68,7 +68,9 @@ install() {
         echo 'add-zsh-hook chpwd sourcerer' >> "$profile"
         echo 'sourcerer' >> "$profile"
     else
-        echo 'function cd() { builtin cd "$@" && sourcerer }' >> "$profile"
+        echo 'function cd() {' >> "$profile"
+        echo '    builtin cd "$@" && sourcerer' >> "$profile"
+        echo '}' >> "$profile"
         echo 'sourcerer' >> "$profile"
     fi
 }
