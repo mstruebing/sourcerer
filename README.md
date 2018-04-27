@@ -1,5 +1,7 @@
 # sourcerer
 
+__DON'T USE THIS - THIS IS DANGEROUS__
+
 A tool to automatically source a `.sourcerer` file in your shell when entering
 this directory via `cd`.
 
